@@ -40,7 +40,7 @@
         "test:cover": "npm run build:dev && nyc -r lcov -x '**/*.spec.ts' jasmine --config=jasmine.json && nyc report",
         "test:watch": "npm run build:test-watch && onchange -i -v -d 100 dist -- jasmine --config=jasmine.json --reporter=jasmine-console-reporter",
         "prepare": "husky install",
-        "prepublish": "npm run build:prod",
+        "prepack": "npm run build:prod",
         "lint": "npx eslint 'src/**/*.ts'",
         "lint:fix": "npx eslint 'src/**/*.ts' --fix",
         "tidy": "npx prettier --write .",
