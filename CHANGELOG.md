@@ -77,3 +77,7 @@ Version lock dependencies.
 # v5.2.1
 
 Fixed export of types for more modern Node versions.
+
+# v6.0.1
+
+Bumped lodash to 4.18.1 to clear the open prototype-pollution and code-injection advisories. Moved the production build from the defunct prepublish hook to prepack so publishing always ships a fresh build. Stopped emitting sourcemaps in the production build; the maps were never shipped and the dangling sourceMappingURL comments caused ENOENT noise in consumers.
